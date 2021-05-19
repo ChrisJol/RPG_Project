@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using RPG.Attributes;
-using RPG.Control;
+using RPG.Raycast;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,7 +44,7 @@ namespace RPG.Combat
             }
         }
 
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleRaycast(GameObject callingController)
         {
             if(Mouse.current.press.isPressed)
             {

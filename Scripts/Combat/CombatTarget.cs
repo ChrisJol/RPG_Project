@@ -1,6 +1,6 @@
 using UnityEngine;
 using RPG.Attributes;
-using RPG.Control;
+using RPG.Raycast;
 using UnityEngine.InputSystem;
 
 namespace RPG.Combat
@@ -13,7 +13,7 @@ namespace RPG.Combat
             return CursorType.Combat;
         }
 
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleRaycast(GameObject callingController)
         {
             if (!callingController.GetComponent<Fighter>().CanAttack(gameObject))
             {
